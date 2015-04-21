@@ -1,0 +1,26 @@
+NAME="libcdr0.1"
+VERSION=0.1.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Corel Draw import filter library"
+DESCRIPTION="Libcdr is a library providing ability to interpret and import
+Corel Draw drawings into various applications."
+HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libcdr"
+SRC_URI="http://dev-www.libreoffice.org/src/libcdr/libcdr-${VERSION}.tar.xz"
+SRC_DIR="libcdr-${VERSION}"
+PATCH_URI="0.0.14-ldflags.patch
+	   0.0.14-vpath.patch"
+
+PKG_NAMES="libcdr-tools ${NAME}_1 ${NAME}-devel ${NAME}-doc"
+libcdr_tools_CATEGORY="Graphics"
+libcdr_tools_OBSOLETES="libcdr-bin"
+libcdr_tools_SUMMARY="Corel Draw drawing converters"
+libcdr_tools_CONTENTS="usr/bin/*.exe"
+libcdr0_1_1_SUMMARY="${SUMMARY} (runtime)"
+libcdr0_1_1_CONTENTS="--exclude=html usr/bin/*-0.1-1.dll usr/share/doc/"
+libcdr0_1_devel_SUMMARY="${SUMMARY} (development)"
+libcdr0_1_devel_CONTENTS="usr/include/ usr/lib/"
+libcdr0_1_doc_SUMMARY="${SUMMARY} (API documentation)"
+libcdr0_1_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+KEEP_LA_FILES="none"
