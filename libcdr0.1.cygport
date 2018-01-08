@@ -1,6 +1,6 @@
 NAME="libcdr0.1"
-VERSION=0.1.3
-RELEASE=2
+VERSION=0.1.4
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Corel Draw import filter library"
 DESCRIPTION="Libcdr is a library providing ability to interpret and import
@@ -22,5 +22,3 @@ libcdr0_1_devel_SUMMARY="${SUMMARY} (development)"
 libcdr0_1_devel_CONTENTS="usr/include/ usr/lib/"
 libcdr0_1_doc_SUMMARY="${SUMMARY} (API documentation)"
 libcdr0_1_doc_CONTENTS="usr/share/doc/${NAME}/html/"
-
-KEEP_LA_FILES="none"
